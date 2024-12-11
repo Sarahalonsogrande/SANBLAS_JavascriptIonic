@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Password</title>
+</head>
+<body>
+
+    <!-- Longitud mínima 8 caracteres.
+    Una letra mayúscula.
+    Una letra minúscula.
+    Un dígito numérico.
+    Un carácter # ó $. -->
+
+</body>
+</html>
+<script>
+    let regexp = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[#$?]).{8,}$/;
+    let password = 'patAta$3';
+    console.log(password.match(regexp));
+</script>
