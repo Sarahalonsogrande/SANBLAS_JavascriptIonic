@@ -11,6 +11,11 @@ let jesus = {
     programador : true
 }
 
+console.log(typeof nombre); // String
+console.log(typeof alumno); // Object (aunque es un Array)
+console.log(typeof jesus); // Object
+
+
 // JSON (Javascript Object Notation): formato de los objetos en JS
 
 // Objeto con: título, número temporadas, sipnosis, año estreno, plataforma
@@ -45,8 +50,6 @@ let aDosMetros = {
     ]
 }
 
-console.log(jesus.nombre);
-
-console.log(typeof nombre); // String
-console.log(typeof alumno); // Object (aunque es un Array)
-console.log(typeof jesus); // Object
+aDosMetros.reparto.forEach((individuo) => {
+    console.log(`Nombre: ${individuo.nombre}.Personajes: ${individuo.personaje}`);
+})
