@@ -77,35 +77,3 @@
     </main>
 </body>
 </html>
-
-<script>
-    function seleccionarGenero(selectorGenero, bgColor) {
-        let series = document.querySelectorAll(selectorGenero);
-        series.forEach((serie) => {
-            serie.style.backgroundColor = bgColor;
-        });
-    }
-
-    document.querySelector("#btnTerror").addEventListener("click", (event) => {
-        seleccionarGenero(".serie", "rgb(255,235,205)");
-        seleccionarGenero(".terrorClass", "#FF4444");
-        //let componenteAudio = document.querySelector("#audio-terror");
-        //componenteAudio.play();
-    });
-
-    document.querySelector("#btnAccion").addEventListener("click", (event) => {
-        seleccionarGenero(".serie", "rgb(255,235,205)");
-        seleccionarGenero(".accionClass", 'orange');
-    });
-
-    let inputTitulo = document.querySelector("#tituloID");
-    inputTitulo.addEventListener("input", (event) => {
-        let cadenaBusqueda = inputTitulo.value.toLowerCase();
-        console.log(`Buscando ${cadenaBusqueda}`);
-        seleccionarGenero(".serie", "rgb(255,235,205)");
-        if (cadenaBusqueda.length > 0) {
-            seleccionarGenero(`[titulo*=${cadenaBusqueda}]`,'orange');
-        }
-    });
-
-</script>
