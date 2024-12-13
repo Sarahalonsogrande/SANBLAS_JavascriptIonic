@@ -47,8 +47,15 @@ playas.filter(playa => playa.dificultad === 'Experto').forEach(playa => console.
 //3. Obtención del código HTML que representa una playa
 //<div class='playa'><div>Playa:Famara</div><div>País:España</div></div>
 
-let html = playas.map(playa => {
+const DIVSHTML = playas.map(playa => {
     return `<div class='playa'><div>Playa: "${playa.nombre}" </div>><div>País: "${playa.pais}" </div></div>`;
 });
 
-console.log(html);
+console.log(DIVSHTML);
+
+// Otra manera de hacerlo.
+
+playas
+    .filter(playa => playa.dificultad === 'Experto')
+    .map(playa => `<div class='playa'><div>Playa: "${playa.nombre}" </div>><div>País: "${playa.pais}" </div></div>`)
+    .forEach(lineaHTML => console.log(lineaHTML));

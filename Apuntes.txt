@@ -1,8 +1,14 @@
-FETCH API:
+¿Qué es una API?
+API significa Interfaz de Programación de Aplicaciones (en inglés Application Programming Interface). 
+Conjunto de reglas y protocolos que permiten que diferentes programas o aplicaciones se comuniquen entre sí.
+En términos sencillos, una API es una puertaFETCH API:
 
 GET
 POST
 PUT
 DELETE
 
-MAP: insert into
+*********
+SERVICIOS WEB:
+
+Tipo: RESTful web service
