@@ -1,0 +1,8 @@
+FETCH API:
+
+GET
+POST
+PUT
+DELETE
+
+MAP: insert into
