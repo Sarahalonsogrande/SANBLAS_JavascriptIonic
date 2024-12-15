@@ -43,6 +43,8 @@ function processData(data) {//data (en este caso) es un array
 
 }
 
+// CLASE
+
 function doRequest(url) {
     fetch(url)
         .then((response) => {
@@ -61,4 +63,39 @@ function doRequest(url) {
         .catch((error) => console.error("Fetch error:", error));
 }
 
+// PROFE
+
+function doRequest(url) {
+    fetch(url)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then((data) => {
+            processData(data);
+        })
+        .catch((error) => console.error("Fetch error:", error));
+}
+
+// RAPIDAPI
+
 doRequest(URL);
+
+const url = 'https://imdb-top-100-movies.p.rapidapi.com/';
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': 'Sign Up for Key',
+		'x-rapidapi-host': 'imdb-top-100-movies.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}

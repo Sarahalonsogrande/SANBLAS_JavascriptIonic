@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantilla</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+
+    header {
+      background: #4CAF50;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav button {
+      padding: 0.5rem 1rem;
+      background: #fff;
+      color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background: #f0f0f0;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    article {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: calc(33.333% - 1rem);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figure img {
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      padding: 0.5rem;
+      background: #f4f4f4;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .content {
+      padding: 1rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      article {
+        width: calc(50% - 1rem);
+      }
+    }
+
+    @media (max-width: 480px) {
+      article {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div>Logo</div>
+      <button>Botón</button>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <figure>
+        <img src="https://via.placeholder.com/300" alt="Imagen de ejemplo">
+        <figcaption>Imagen 1</figcaption>
+      </figure>
+      <div class="content">
+        <h2>Título 1</h2>
+        <p>Esta es la descripción de la tarjeta 1. Es breve y concisa.</p>
+      </div>
+    </article>
+    <article>
+      <figure>
+        <img src="https://via.placeholder.com/300" alt="Imagen de ejemplo">
+        <figcaption>Imagen 2</figcaption>
+      </figure>
+      <div class="content">
+        <h2>Título 2</h2>
+        <p>Esta es la descripción de la tarjeta 2. Una pequeña explicación.</p>
+      </div>
+    </article>
+    <article>
+      <figure>
+        <img src="https://via.placeholder.com/300" alt="Imagen de ejemplo">
+        <figcaption>Imagen 3</figcaption>
+      </figure>
+      <div class="content">
+        <h2>Título 3</h2>
+        <p>Esta es la descripción de la tarjeta 3. Contenido informativo.</p>
+      </div>
+    </article>
+    <article>
+      <figure>
+        <img src="https://via.placeholder.com/300" alt="Imagen de ejemplo">
+        <figcaption>Imagen 1</figcaption>
+      </figure>
+      <div class="content">
+        <h2>Título 1</h2>
+        <p>Esta es la descripción de la tarjeta 1. Es breve y concisa.</p>
+      </div>
+    </article>
+    <article>
+      <figure>
+        <img src="https://via.placeholder.com/300" alt="Imagen de ejemplo">
+        <figcaption>Imagen 2</figcaption>
+      </figure>
+      <div class="content">
+        <h2>Título 2</h2>
+        <p>Esta es la descripción de la tarjeta 2. Una pequeña explicación.</p>
+      </div>
+    </article>
+    <article>
+      <figure>
+        <img src="https://via.placeholder.com/300" alt="Imagen de ejemplo">
+        <figcaption>Imagen 3</figcaption>
+      </figure>
+      <div class="content">
+        <h2>Título 3</h2>
+        <p>Esta es la descripción de la tarjeta 3. Contenido informativo.</p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

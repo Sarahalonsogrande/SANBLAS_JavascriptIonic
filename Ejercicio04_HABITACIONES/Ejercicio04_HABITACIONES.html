@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOREACH SERIES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+    Botón 'TERROR'
+    Botón 'ACCIÓN'
+    INPUT tipo txt para introducir el título. 
+    Cinco fichas de series con título, género e imágen. 
+    -->
+
+    <header>
+        <h1>ELIGE TU AVENTURA</h1>
+        <nav id="menu">
+            <input type="text" id="tituloID" name="" placeholder="Título">
+            <button id="btnTerror">TERROR</button>
+            <button id="btnAccion">ACCIÓN</button>
+        </nav>
+    </header>
+
+    <main id="listado">
+        <article class="serie terrorClass" titulo="Marianne">
+            <ul>
+                <li>Marianne</li>
+                <li>Terror</li>
+                <li>
+                    <img src="https://pics.filmaffinity.com/marianne-803387895-large.jpg" alt="">
+                </li>
+            </ul>
+        </article>
+
+        <article class="serie accionClass" titulo="ZORO">
+            <ul>
+                <li>ZORO</li>
+                <li>Acción</li>
+                <li>
+                    <img src="https://img.ecartelera.com/noticias/fotos/74400/74442/2.jpg" alt="">
+                </li>
+            </ul>
+        </article>
+
+        <article class="serie terrorClass" titulo="Pesadillas">
+            <ul>
+                <li>Pesadillas</li>
+                <li>Terror</li>
+                <li>
+                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTmaMRFhFz6b4gdEivSx6mog6SwY0F9V98USofxbaVevXzhcjl3" alt="">
+                </li>
+            </ul>
+        </article>
+
+        <article class="serie terrorClass" titulo="Channel Zero">
+            <ul>
+                <li>Channel Zero</li>
+                <li>Terror</li>
+                <li>
+                    <img src="https://pics.filmaffinity.com/channel_zero_candle_cove-701130460-large.jpg" alt="">
+                </li>
+            </ul>
+        </article>
+
+        <article class="serie accionClass" titulo="Reina Roja">
+            <ul>
+                <li>Reina Roja</li>
+                <li>Acción</li>
+                <li>
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/z3uhy8yree1gnyiuvipkzxsiksp-66978b06c24ad.jpg" alt="">
+                </li>
+            </ul>
+        </article>
+
+    </main>
+</body>
+</html>
+
+<script>
+    function seleccionarGenero(selectorGenero, bgColor) {
+        let series = document.querySelectorAll(selectorGenero);
+        series.forEach((serie) => {
+            serie.style.backgroundColor = bgColor;
+        });
+    }
+
+    document.querySelector("#btnTerror").addEventListener("click", (event) => {
+        seleccionarGenero(".serie", "rgb(255,235,205)");
+        seleccionarGenero(".terrorClass", "#FF4444");
+        //let componenteAudio = document.querySelector("#audio-terror");
+        //componenteAudio.play();
+    });
+
+    document.querySelector("#btnAccion").addEventListener("click", (event) => {
+        seleccionarGenero(".serie", "rgb(255,235,205)");
+        seleccionarGenero(".accionClass", 'orange');
+    });
+
+    let inputTitulo = document.querySelector("#tituloID");
+    inputTitulo.addEventListener("input", (event) => {
+        let cadenaBusqueda = inputTitulo.value.toLowerCase();
+        console.log(`Buscando ${cadenaBusqueda}`);
+        seleccionarGenero(".serie", "rgb(255,235,205)");
+        if (cadenaBusqueda.length > 0) {
+            seleccionarGenero(`[titulo*=${cadenaBusqueda}]`,'orange');
+        }
+    });
+
+</script>
