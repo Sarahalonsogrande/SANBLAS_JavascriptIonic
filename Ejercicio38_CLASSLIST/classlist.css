@@ -1,0 +1,97 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 30px;
+}
+
+/* Estilo para cada grupo de formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Estilos para los botones */
+button.btn-submit {
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid transparent; /* Cambiar borde a verde */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button.btn-submit:hover {
+    border: 2px solid transparent; /* Cambiar borde a verde */ 
+}
+
+/* Estilos para el formulario cuando tiene enfoque */
+input:focus, select:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Estilos para los campos de error */
+input:invalid, textarea:invalid {
+    border-color: #ff6b6b;
+}
+
+input:valid, textarea:valid {
+    border-color: #4CAF50;
+}
+
+.activado {
+    background: #4CAF50;
+    box-shadow: 0 0 15px 5px rgba(0, 255, 0, 0.6); /* Sombra verde */
+    border: 2px solid #054d05; /* Cambiar borde a verde */
+}
+.desactivado {
+    background: #4b054d;
+    box-shadow: 0 0 15px 5px rgba(242, 0, 255, 0.6); /* Sombra verde */
+    border: 2px solid #4b054d; /* Cambiar borde a verde */
+}

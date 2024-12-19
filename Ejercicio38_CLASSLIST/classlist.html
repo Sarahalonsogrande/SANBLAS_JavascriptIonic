@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classlist</title>
+    <link rel="stylesheet" href="classlist.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Contacto</h2>
+        <form action="#" method="post">
+            <!-- Campo de texto (Nombre) -->
+            <div class="form-group">
+                <label>
+                    Nombre:
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </label>
+            </div>
+
+            <!-- Campo de texto (Correo) -->
+            <div class="form-group">
+                <label>
+                    Correo electrónico:
+                    <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+                </label>
+            </div>
+
+            <!-- Campo de contraseña -->
+            <div class="form-group">
+                <label>
+                    Contraseña:
+                    <input type="password" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña" required>
+                </label>
+            </div>
+
+            <!-- Campo de selección -->
+            <div class="form-group">
+                <label>
+                    País:
+                    <select id="pais" name="pais">
+                        <option value="españa">España</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="china">China</option>
+                        <option value="colombia">Colombia</option>
+                    </select>
+                </label>
+            </div>
+
+            <!-- Área de texto (Comentario) -->
+            <div class="form-group">
+                <label>
+                    Comentarios:
+                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe tus comentarios aquí..."></textarea>
+                </label>
+            </div>
+
+            <!-- Campo de archivo -->
+            <div class="form-group">
+                <label>
+                    Sube tu archivo:
+                    <input type="file" id="archivo" name="archivo">
+                </label>
+            </div>
+
+            <!-- Botón de envío -->
+            <div class="form-group">
+                <button type="submit" id="btn1" class="btn-submit activado">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script src="classlist.js"></script>
