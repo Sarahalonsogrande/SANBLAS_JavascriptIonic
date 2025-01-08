@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- Title -->
+    <title>Set Interval</title>
+    <!-- Theme Color -->
+    <!-- <meta name="theme-color" content="#112255"> -->
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="img/favicon.ico"> -->
+    <!-- Linked css styles -->
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="date" content="">
+</head>
+
+<body>
+    <div class="cronometro" id="cronometro">0</div>
+    <div class="reloj" id="reloj">00:00:00:0000</div>
+
+    <div id="div-gato-horizontal" class="raining-cats">
+        <img src="nyanCat.png" alt="Cat" class="nyanCat">
+    </div>
+
+    <div id="div-gato-vertical" class="raining-cats">
+        <img src="cat.png" alt="Cat" class="cat">
+    </div>
+
+    <div id="div-ball" class="raining-cats">
+        <img src="ball.webp" alt="Ball" class="cat">
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id repellendus, maiores quaerat possimus magnam odio
+        eveniet incidunt illo, sunt cumque similique, expedita consectetur doloribus aspernatur adipisci odit aliquid
+        sapiente facere.
+        Eaque, nemo assumenda et obcaecati doloremque, voluptatum neque dolore quidem atque pariatur itaque aperiam,
+        necessitatibus consequuntur nesciunt architecto ab reprehenderit nostrum! Illum reiciendis in, eum minus est
+        error ad amet?
+        Deserunt quibusdam tempora animi assumenda ipsam, enim blanditiis! Et, qui? Alias dicta sed aliquid vel modi
+        temporibus dolorem officiis numquam at dignissimos tempore illo, aperiam accusamus, quo, facere maiores? Iure.
+        Commodi libero culpa officia qui delectus, possimus molestias dolores totam placeat. Dicta optio laborum ullam
+        accusamus. Unde, quaerat hic. At, quidem! Debitis eos consectetur totam nobis perferendis? Doloribus, repellat
+        aliquid!
+        Asperiores quas, amet quasi, dignissimos quod illo quia eaque harum similique rerum modi dolorum voluptate quis
+        perferendis, quae aliquid explicabo debitis eum hic ratione? Praesentium sequi ad alias asperiores iusto.
+        Aliquam perferendis et tenetur nihil accusantium, nobis sed in architecto velit dicta doloribus ab odio
+        incidunt, saepe eum reiciendis, commodi modi rem quae repellat? Asperiores corporis hic dolore distinctio
+        aliquid.
+        Error, quo, officia accusamus velit reiciendis quasi ratione architecto pariatur obcaecati corporis dolore iure
+        earum alias tempore ad vel odit eligendi sunt cupiditate eos animi unde! Sequi laboriosam iste dicta?
+        Reiciendis ullam eum neque culpa omnis mollitia earum, repellendus provident quos corporis sapiente impedit eos
+        aliquam esse voluptas temporibus cupiditate libero consectetur doloribus, aperiam obcaecati recusandae. Natus
+        quisquam voluptatibus pariatur.
+        Voluptas, asperiores culpa. Quisquam, saepe sint, obcaecati deleniti unde suscipit quae dolor quis harum
+        laudantium vero facere aspernatur nesciunt assumenda, at sunt commodi earum ducimus quaerat non? Deserunt, ea
+        rem?
+        Iste necessitatibus veritatis quam alias porro, modi dolore praesentium assumenda sit provident. Voluptatibus,
+        ipsum quisquam quam consectetur dicta neque, natus similique, ad doloremque error inventore culpa voluptatem
+        voluptate esse quis?</p>
+
+    <body>
+
+</html>
+<script>
+
+    // CONTADOR
+
+    let contador = 0;
+
+    setInterval(() => {
+        contador++;
+        document.getElementById('cronometro').innerText = contador;
+    }, 1000);
+
+    // RELOJ
+
+    setInterval(() => {
+        let fecha = new Date();
+        let hora = fecha.getHours();
+        let minutos = fecha.getMinutes();
+        let segundos = fecha.getSeconds();
+        let milisegundos = fecha.getMilliseconds();
+        document.getElementById('reloj').innerText = `${hora}:${minutos}:${segundos}:${milisegundos}`;
+    }, 1000);
+
+    // LLUVIA DE GATOS
+
+    let marginTop = 0;
+    let marginLeft = 0;
+
+    let movingRight = true;  // Controla la dirección del movimiento horizontal
+
+    // Ancho del gato
+    let catWidth = 180;
+
+    setInterval(() => {
+
+        marginTop += 1;
+        let divGatoVertical = document.getElementById('div-gato-vertical');
+        divGatoVertical.style.marginTop = `${marginTop}px`;
+
+        if (marginTop > window.innerHeight) {
+            marginTop = -window.innerHeight * 0.5;
+        }
+
+// Movimiento horizontal
+if (movingRight) {
+        marginLeft += 1;  // Mover a la derecha
+    } else {
+        marginLeft -= 1;  // Mover a la izquierda
+    }
+
+    let divGatoHorizontal = document.getElementById('div-gato-horizontal');
+    divGatoHorizontal.style.marginLeft = `${marginLeft}px`;
+
+    // Verificar si el gato ha llegado al borde derecho
+    if (marginLeft > window.innerWidth - catWidth) {
+        movingRight = false;  // Invertir la dirección al llegar al borde derecho
+        divGatoHorizontal.style.transform = 'scaleX(-1)';
+    }
+
+    // Verificar si el gato ha llegado al borde izquierdo
+    if (marginLeft < 75) {
+        movingRight = true;  // Volver a mover a la derecha al llegar al borde izquierdo
+        divGatoHorizontal.style.transform = 'scaleX(1)';
+    }
+
+    }, 8);
+
+</script>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <!-- Title -->
+        <title>Examen</title>
+        <!-- Theme Color -->
+        <!-- <meta name="theme-color" content="#112255"> -->
+        <!-- Favicon -->
+        <link rel="icon" href="../favicon.ico">
+        <!-- Linked css styles -->
+        <!-- <link rel="stylesheet" href="css/reset.css"> -->
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="date" content="">
+    </head>
+
+<!--
+Aplicación SPA (Single Page Application). Solo una página HTML.
+
+Construir un test con 3 preguntas, cada una de ellas con tres respuestas.
+
+Al cargar la página aparece la primera pregunta.
+Dispones de 5 segundos para responder y pulsar el botón siguiente.
+Si respondes y pulsas siguiente, aparece la siguiente pregunta.
+Si pasan 5 segundos sin responder, aparece la siguiente pregunta.
+Se tiene que mostrar el tiempo transcurrido desde el inicio de la pregunta.
+Al final se muestra el resultado del examen.
+-->
+
+
+    <body>
+
+        <script src="app.js" async defer></script>
+
+        <div class="portada preguntas" id="portada-examen">
+            <h1>EXAMEN SUPERDIFÍCIL</h1>
+            <div class="cuenta-atras" id="cuenta-atras">5</div>
+            <button class="btn-comenzar" id="btn-comenzar">COMENZAR</button>
+        </div>
+
+        <div class="primera-pregunta preguntas" id="primera-pregunta">
+            <h3>1.- Pregunta uno</h3>
+            <ul>
+                <li><input type="radio" name="" id="">Opción 1</li>
+                <li><input type="radio" name="" id="">Opción 2</li>
+                <li><input type="radio" name="" id="">Opción 3</li>
+                <li><button>SIGUIENTE</button></li>
+            </ul>
+        </div>
+
+        <div class="segunda-pregunta preguntas" id="segunda-pregunta">
+            <h3>2.- Pregunta</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="tercera-pregunta preguntas" id="tercera-pregunta">
+            <h3>3.- Pregunta</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    <body>
+</html>
