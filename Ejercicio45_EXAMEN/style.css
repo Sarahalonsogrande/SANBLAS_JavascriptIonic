@@ -2,6 +2,7 @@
 *::after,
 *::before {
     box-sizing: border-box;
+    border: 1px solid red;
 }
 
 * {
@@ -19,6 +20,8 @@ html {
 
 body {
     min-height: 100dvh;
+    display: grid;
+    place-content: center;
     -webkit-font-smoothing: antialiased;
     background: lightgrey;
 }
@@ -56,10 +59,31 @@ button {
     cursor: pointer;
 }
 
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .preguntas {
+    width: 400px;
+    height: 400px;
     display: none;
+    padding: 2rem;
+    background: lightpink;
+    border: 0.6px solid darkslateblue;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 4px 18px rgba(0, 0, 0, 0.1);
 }
 
 input {
     margin: 0.8rem;
+}
+
+.btn-continuar {
+    text-align: right;
+}
+
+.cuenta-atras {
+    font-size: 4rem;
 }

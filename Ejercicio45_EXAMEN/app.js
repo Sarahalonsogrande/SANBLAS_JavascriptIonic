@@ -1,40 +1,40 @@
-    // const PREGUNTA1 = document.querySelector('primera-pregunta');
-    // const PREGUNTA2= document.querySelector('segunda-pregunta');
-    // const PREGUNTA3 = document.querySelector('tercera-pregunta');
-
 let btnComenzar = document.getElementById('btn-comenzar');
+let cuentaAtras = 5;
+let intervalId;
 
-// Hacemos aparecer primera pregunta
-
-window.onload = () => document.getElementById('portada-examen').style.display = 'block';
-
-// Creamos una función que ocultará y mostrará los divs de preguntas
-
+// Función para ocultar y mostrar preguntas
 function mostrarOcultar(ocultarId, mostrarId) {
     document.getElementById(ocultarId).style.display = 'none';
     document.getElementById(mostrarId).style.display = 'block';
 }
 
-btnComenzar.addEventListener ('click', function() {
-    mostrarOcultar('portada-examen', 'primera-pregunta');
-})
-
-    // CUENTA ATRÁS
-
-    let cuentaAtras = 5;
-
-    setInterval(() => {
+// Iniciar cuenta atrás
+function iniciarCuentaAtras() {
+    intervalId = setInterval(() => {
         cuentaAtras--;
         document.getElementById('cuenta-atras').innerText = cuentaAtras;
-    }, 1200);
+        if (cuentaAtras <= 0) {
+            clearInterval(intervalId);
+            mostrarOcultar('primera-pregunta', 'segunda-pregunta');
+        }
+    }, 1000); // Actualiza el contador cada segundo
+}
 
+// Mostrar la portada y luego la primera pregunta
+window.onload = () => {
+    document.getElementById('portada-examen').style.display = 'block'; // Muestra la portada
+};
 
+// Al hacer clic en "Comenzar", ocultamos la portada y mostramos la primera pregunta
+btnComenzar.addEventListener('click', function() {
+    mostrarOcultar('portada-examen', 'primera-pregunta'); // Muestra la primera pregunta
+    iniciarCuentaAtras(); // Inicia la cuenta atrás cuando aparece la primera pregunta
+});
+
+// Configura el tiempo para que se muestre la primera pregunta después de 6 segundos
 setTimeout(() => {
-    document.querySelector('#portada-examen').style.display = 'none';
-    document.querySelector('#primera-pregunta').style.display = 'block';
+    document.querySelector('#portada-examen').style.display = 'none'; // Oculta la portada después de 6 segundos
+    document.querySelector('#primera-pregunta').style.display = 'block'; // Muestra la primera pregunta
+    iniciarCuentaAtras(); // Inicia la cuenta atrás cuando se muestra la primera pregunta
 }, 6000);
 
-// Definimos 5 segundos para contestar y pulsar el botón
-// setTimeout(() => {
-//         document.querySelector('#primera-pregunta').style.display = 'none';
-//     }, 5000);

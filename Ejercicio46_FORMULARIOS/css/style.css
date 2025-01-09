@@ -1,0 +1,43 @@
+:root {
+    --primary-color: --eucalyptus;
+    --primary-dark-color: --green-pea;
+    --background-dark-color: --baltic-sea;
+    --background-darker-color: --cod-gray;
+    --background-light-color: --alabaster;
+    --background-lighter-color: --white;
+    --text-color: --cod-gray;
+    --text-muted-color: --dove-gray;
+    --text-inverted-color: --white;
+    --border-color: --dove-gray;
+    --border-inverted-color: --gallery;
+    --custom-border: 2px solid #000
+    --rowWrap: row wrap;
+}
+
+body {
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background: hsl(351, 100%, 86%, 0.6);
+    border: 0.6px solid darkslateblue;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
