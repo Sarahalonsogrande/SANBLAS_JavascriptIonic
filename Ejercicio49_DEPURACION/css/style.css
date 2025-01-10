@@ -14,26 +14,120 @@
     --rowWrap: row wrap;
 }
 
-body {
+/* * {
+    border: 1px solid red;
+} */
+
+.grid-center {
     display: grid;
     place-content: center;
 }
 
 .card {
-    width: 400px;
-    height: 400px;
+    position: relative;
+    width: 450px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem;
-    background: lightpink;
+    padding: 3rem;
+    background: hsl(351, 100%, 86%);
     border: 0.6px solid darkslateblue;
     border-radius: 6px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 4px 18px rgba(0, 0, 0, 0.1);
 }
 
-.div-operandos {
+.error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: hsl(352, 98%, 38%);
+    color: hsl(351, 100%, 86%);
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-align: center;
+    display: none;
+    transition: all 0.8s;
+    z-index: 1;
+}
+
+.div-flex {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+    justify-content: space-around;
     margin: 1rem;
+}
+
+input,
+button {
+    height: 6rem;
+    padding: 0.4rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    border: 0.6px solid darkslateblue;
+    border-radius: 0.6rem;
+}
+
+button {
+    padding: 0;
+    width: 5rem;
+    height: 5rem;
+}
+
+.logo {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+img {
+    width: 100%;
+}
+
+
+
+.cont-logo {
+    display: flex;
+    align-items: stretch;
+    justify-content: baseline;
+    width: 200px;
+    height: 200px;
+    background: rebeccapurple;
+}
+
+.logo1 {
+    width: 70%;
+    height: 50%;
+    text-align: right;
+    background: hsl(306, 50%, 40%, 0.7);
+    border-radius: 50% 0 0 0 ;
+}
+
+.logo2 {
+    width: 200px;
+    height: 200px;
+    background: rebeccapurple;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+#holygrail-container {
+    background: #FFF;
+    height: 100%;
+    min-width: 400px;
+    min-height: 270px;
+}
+
+header, footer, nav, aside, section {
+    padding: 20px;
+    border: 1px solid #000;
+    text-align: center;
 }

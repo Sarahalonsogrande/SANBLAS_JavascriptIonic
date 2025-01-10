@@ -8,7 +8,7 @@
         <!-- Theme Color -->
         <!-- <meta name="theme-color" content="#112255"> -->
         <!-- Favicon -->
-        <link rel="icon" href="img/favicon.ico">
+        <link rel="icon" href="../favicon.ico">
         <!-- Linked css styles -->
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
@@ -18,22 +18,53 @@
         <meta name="description" content="">
         <meta name="date" content="">
     </head>
-    <body>
-        <script src="js/script.js" async defer></script>
+    <body class="grid-center">
+
+<!-- 
+1. Crear una página HTML
+
+2. Crear un fichero calculadora.js con las funciones:
+restar(numero1, numero2) -> Devuelve la suma (mal a propósito) de los números
+
+3. La función sumar verifica que los argumentos numero1 y numero2 son 
+correctos (tipo) lanzando una excepción si no lo son.
+
+4. En la página HTML hay dos inputs (número 1 y número 2) y los botones
+
+5. En la página HTML se muestra el resultado de la operación o el mensaje de 
+error si procede. 
+-->
+
+        <script src="js/calculadora.js" async defer></script>
+        <script src="js/manager.js" async defer></script>
 
         <section class="card">
-            <div class="numeros">
-                <input type="text" name="num1" id="num1">
-                <input type="text" name="num2" id="num2">
+
+            <section class="grid-center card error" id="error">
+                <p>POR FAVOR INTRODUZCA UN NÚMERO VÁLIDO</p>
+            </section>
+
+            <div class="logo" id="logo">
+                <img src="../favicon.ico" alt="">
             </div>
 
-            <div class="div-operandos">
-                <button id="sumar" class="">SUMAR</button>
-                <button id="restar" class="">RESTAR</button>
+            <div class="numeros div-flex">
+                <input type="text" class="numero" id="numero1">
+                <input type="text" class="numero" id="numero2">
+            </div>
+
+            <div class="div-flex">
+                <button id="btnSumar" class="">+</button>
+                <button id="btnRestar" class="">-</button>
             </div>
 
             <input type="text" name="resultado" id="resultado">
 
         </section>
+
+        <div class="cont-logo">
+            <div class="logo1">hh</div>
+            <div class="logo2">hh</div>
+        </div>
     <body>
 </html>
