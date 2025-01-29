@@ -1,7 +1,0 @@
-{
-  "name": "Hola_Mundo_Ionic",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}
